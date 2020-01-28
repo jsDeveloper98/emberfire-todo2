@@ -1,0 +1,9 @@
+<div class="form">
+    <h1 class="header">todos</h1>
+    <div class="arrow">
+        <i class="down" {{action 'doneAllTodos'}}></i>
+        {{input class='todo-input' autofocus='on' value=inputValue key-up=(action 'addTodo')}}
+    </div>
+</div>
+
+{{yield}}

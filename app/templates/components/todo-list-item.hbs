@@ -1,0 +1,16 @@
+<li class="todo-list-item">
+    <label class="label">
+        <div class="toggle">
+            {{input change=(action 'saveTodo' todo) class="toggle-state" type="checkbox" name="check" checked=todo.done}}
+            <div class="toggle-inner">
+                <div class="indicator"></div>
+            </div>
+            <div class="active-bg"></div>
+        </div>
+        <div class="label-text"></div>
+    </label>
+    <span class="todo-title {{if todo.done ' done'}}">{{todo.title}}</span>
+    <span class="remove-todo" {{action 'removeTodo' todo}}>✖</span>
+</li>
+
+{{yield}}

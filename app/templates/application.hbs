@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="container">
+    {{form}}
+    <div class="todo-list-container">
+        {{#each filteredTodos as |todo|}}
+            {{todo-list-item todo=todo}}
+        {{/each}}
+        {{#if todos.length}}
+            <div class="filter-buttons">
+                <div class="filter-btn" {{action 'filterTodos' 'all'}}>All</div>
+                <div class="filter-btn" {{action 'filterTodos' 'active'}}>Active</div>
+                <div class="filter-btn" {{action 'filterTodos' 'completed'}}>Completed</div>
+                <div class="filter-btn remove-completed" {{action 'removeCompleted'}}>Remove completed</div>
+            </div>
+        {{/if}}
+    </div>
+</div>
 
 {{outlet}}

@@ -1,11 +1,21 @@
-'use strict';
+"use strict";
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-todo',
+    firebase: {
+      apiKey: "AIzaSyBvqElLlGaSLjMvLUE9EK39LJmpKsYsCBQ",
+      authDomain: "ember-todo-1ce64.firebaseapp.com",
+      databaseURL: "https://ember-todo-1ce64.firebaseio.com",
+      projectId: "ember-todo-1ce64",
+      storageBucket: "ember-todo-1ce64.appspot.com",
+      messagingSenderId: "342549250600",
+      appId: "1:342549250600:web:138ef72c190c7acd61eb1d",
+      measurementId: "G-YE3VT34JSP"
+    },
+    modulePrefix: "ember-todo",
     environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: "/",
+    locationType: "auto",
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -23,7 +33,7 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'development') {
+  if (environment === "development") {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -31,19 +41,19 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
-  if (environment === 'test') {
+  if (environment === "test") {
     // Testem prefers this...
-    ENV.locationType = 'none';
+    ENV.locationType = "none";
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-    ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.rootElement = "#ember-testing";
     ENV.APP.autoboot = false;
   }
 
-  if (environment === 'production') {
+  if (environment === "production") {
     // here you can enable a production-specific feature
   }
 
