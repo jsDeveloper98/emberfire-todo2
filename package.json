@@ -50,5 +50,8 @@
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "ember-truth-helpers": "^2.1.0"
   }
 }

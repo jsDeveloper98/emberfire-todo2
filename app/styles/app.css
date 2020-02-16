@@ -94,10 +94,15 @@ li {
 }
 
 .filter-btn {
-  margin: 0 40px;
+  margin: 0 20px;
   cursor: pointer;
   font-size: 22px;
   color: green;
+  border-radius: 2px;
+}
+
+.active {
+  border: 1px solid green;
 }
 
 .remove-completed {

@@ -6,9 +6,14 @@
         {{/each}}
         {{#if todos.length}}
             <div class="filter-buttons">
-                <div class="filter-btn" {{action 'filterTodos' 'all'}}>All</div>
-                <div class="filter-btn" {{action 'filterTodos' 'active'}}>Active</div>
-                <div class="filter-btn" {{action 'filterTodos' 'completed'}}>Completed</div>
+                <div class="filter-btn {{if (eq selectActive 'all') ' active'}}" {{action 'filterTodos' 'all'}}>All
+                </div>
+                <div class="filter-btn {{if (eq selectActive 'active') ' active'}}" {{action 'filterTodos' 'active'}}>
+                    Active
+                </div>
+                <div class="filter-btn {{if (eq selectActive 'completed') ' active'}}"
+                    {{action 'filterTodos' 'completed'}}>
+                    Completed</div>
                 <div class="filter-btn remove-completed" {{action 'removeCompleted'}}>Remove completed</div>
             </div>
         {{/if}}

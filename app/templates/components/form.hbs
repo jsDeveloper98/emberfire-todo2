@@ -2,7 +2,7 @@
     <h1 class="header">todos</h1>
     <div class="arrow">
         <i class="down" {{action 'doneAllTodos'}}></i>
-        {{input class='todo-input' autofocus='on' value=inputValue key-up=(action 'addTodo')}}
+        {{input placeholder='What needs to be done?' class='todo-input' autofocus='on' value=inputValue key-up=(action 'addTodo')}}
     </div>
 </div>
 

@@ -4,6 +4,7 @@ import { computed } from "@ember/object";
 
 export default Controller.extend({
   inputValue: "",
+  selectActive: "",
   filterName: "all",
   store: service(),
 
@@ -25,6 +26,7 @@ export default Controller.extend({
   actions: {
     filterTodos(type) {
       this.set("filterName", type);
+      this.set("selectActive", type);
     },
     removeCompleted() {
       this.get("todos").forEach(todo => {
